@@ -80,15 +80,15 @@
             </li>
           </ul>
         </div>
-        <div class="user-menu">
-          <div class="header-catalog-wrapper">
-            <a class="header-catalog-title" href="">Каталог товаров</a>
-            <ul class="header-catalog">
+        <ul class="info-list">
+          <li class="info-item header-catalog">
+            <a class="header-catalog-link" href="#">Каталог товаров</a>
+            <ul class="submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
               </li>
               <li>
-                <a href="catalog.html">Моноподы для селфи</a>
+                <a href="" class="sub-menu-active">Моноподы для селфи</a>
               </li>
               <li>
                 <a href="#">Экшн-камеры</a>
@@ -103,19 +103,17 @@
                <a href="#">Квадрокоптеры</a>
               </li>
             </ul>
-          </div>
-          <ul class="header-info">
-            <li>
-              <a href="">Доставка</a>
-            </li>
-            <li>
-             <a href="">Гарантия</a>
-            </li>
-           <li>
-              <a href="">Контакты</a>
-            </li>
-          </ul>
-        </div>
+          </li>
+          <li class="info-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="info-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="info-item">
+             <a href="#">Контакты</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -350,37 +348,5 @@
         </div>
       </div>
     </footer>
-
-    <section class="modal-cart">
-      <h2 class="visually-hidden">Корзина</h2>
-      <ul class="cart-products">
-        <li>
-          <a href="#">
-            <img src="img/cart-product-1.jpg" alt="" width="39" height="43">
-            <h3>Любительская селфи-палка</h3>
-          </a>
-            <button type="button">
-              <span class="visually-hidden">Удалить</span>
-            </button>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/cart-product-2.jpg" alt="" width="39" height="43">
-            <h3>Профессиональная селфи-палка</h3>
-          </a>
-            <button type="button">
-              <span class="visually-hidden">Удалить</span>
-            </button>
-        </li>
-      </ul>
-      <dl>
-        <dt>Товаров:</dt>
-        <dd>2</dd>
-
-        <dt>Сумма:</dt>
-        <dd>2000 ₽</dd>
-      </dl>
-      <a class="button modal-cart-button" href="#">Открыть корзину</a>
-    </section>
   </body>
 </html>

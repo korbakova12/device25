@@ -77,12 +77,12 @@
             </li>
           </ul>
         </div>
-        <div class="user-menu">
-          <div class="header-catalog-wrapper">
-            <a class="header-catalog-title" href="">Каталог товаров</a>
-            <ul class="header-catalog">
+        <ul class="info-list">
+          <li class="info-item header-catalog">
+            <a class="header-catalog-link" href="#">Каталог товаров</a>
+            <ul class="submenu">
               <li>
-                <a href="#" class="header-catalog-active">Виртуальная реальность</a>
+                <a href="#">Виртуальная реальность</a>
               </li>
               <li>
                 <a href="catalog.html">Моноподы для селфи</a>
@@ -100,19 +100,17 @@
                <a href="#">Квадрокоптеры</a>
               </li>
             </ul>
-          </div>
-          <ul class="header-info">
-            <li>
-              <a href="" class="info-item-active">Доставка</a>
-            </li>
-            <li>
-             <a href="">Гарантия</a>
-            </li>
-           <li>
-              <a href="">Контакты</a>
-            </li>
-          </ul>
-        </div>
+          </li>
+          <li class="info-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="info-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="info-item">
+             <a href="#">Контакты</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -422,58 +420,59 @@
       </div>
     </footer>
 
+    <div class="modal-container modal-container-close">
+      <section class="modal modal-delivery">
+        <h2 class="delivery-title">Доставка под заказ</h2>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+       </button>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-delivery-wrapper">
+            <div class="input-wrapper">
+              <label for="delivery-name">Ваше имя:</label>
+              <input class="delivery-name" id="delivery-name" type="text" name="name" placeholder="Введите имя">
+              <span class="input-help">Добавьте имя</span>
+            </div>
 
-    <section class="modal-delivery">
-      <h2 class="delivery-title">Доставка под заказ</h2>
-      <button class="modal-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="modal-delivery-wrapper">
-          <div class="input-wrapper">
-            <label for="delivery-name">Ваше имя:</label>
-            <input class="delivery-name" id="delivery-name" type="text" name="name" placeholder="Введите имя">
-            <span class="input-help">Добавьте имя</span>
-          </div>
+            <div class="input-wrapper">
+              <label for="delivery-email">Ваш e-mail:</label>
+              <input class="delivery-email" id="delivery-email" type="email" name="email" placeholder="Введите e-mail">
+              <span class="input-help input-help-error">Забавный у вас адрес</span>
+            </div>
+         </div>
 
-          <div class="input-wrapper">
-            <label for="delivery-email">Ваш e-mail:</label>
-            <input class="delivery-email" id="delivery-email" type="email" name="email" placeholder="Введите e-mail">
-            <span class="input-help input-help-error">Забавный у вас адрес</span>
-          </div>
-        </div>
+          <div class="modal-delivery-wrapper">
+            <div class="input-wrapper">
+              <label for="delivery-goods">Что нужно привезти:</label>
+              <input class="delivery-goods" id="delivery-goods" type="text" name="order" placeholder="В свободной форме">
+            </div>
 
-        <div class="modal-delivery-wrapper">
-          <div class="input-wrapper">
-            <label for="delivery-goods">Что нужно привезти:</label>
-            <input class="delivery-goods" id="delivery-goods" type="text" name="order" placeholder="В свободной форме">
-          </div>
-
-          <div class="input-wrapper">
-            <div class="quantity-wrapper quantity-label">
-              <label for="quantity">Количество:</label>
-              <button class="tooltip-button">
-                <span class="visually-hidden">Дополнительная информация про возможное количество</span>
-                i
-              </button>
-              <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>
+            <div class="input-wrapper">
+              <div class="quantity-wrapper quantity-label">
+                <label for="quantity">Количество:</label>
+                <button class="tooltip-button">
+                  <span class="visually-hidden">Дополнительная информация про возможное количество</span>
+                </button>
+                <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>
             к провозу багажа.</p>
-            </div>
-            <div class="quantity-wrapper">
-              <button type="button" class="quantity-button quantity-decrease">
-                -
-                <span class="visually-hidden">Уменьшить количество</span>
-             </button>
-              <input class="delivery-quantity" id="quantity" type="number" name="order" value="1">
-              <button type="button" class="quantity-button quantity-increase">
-                +
-                <span class="visually-hidden">Увеличить количество</span>
-             </button>
+              </div>
+              <div class="quantity-wrapper">
+                <button type="button" class="quantity-button quantity-decrease">
+                  -
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+                <input class="delivery-quantity" id="quantity" type="number" name="order" value="1">
+                <button type="button" class="quantity-button quantity-increase">
+                 +
+                  <span class="visually-hidden">Увеличить количество</span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <button class="button delivery-form-button" type="submit">Отправить</button>
-      </form>
-    </section>
+          <button class="button delivery-form-button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+
   </body>
 </html>
