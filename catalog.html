@@ -35,14 +35,48 @@
           </ul>
 
           <ul class="navigation-list user-tools">
-            <li>
-              <a class="compare" href="#">Сравнить</a>
+            <li class="navigation-item compare">
+              <a class="compare-link" href="#">Сравнить</a>
             </li>
-            <li>
-              <a class="cart" href="#">
+            <li class="navigation-item cart">
+              <a class="cart-link" href="#">
                 <span class="cart-counter">2</span>
                 Корзина
               </a>
+              <div class="popover popover-cart">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <a href="#">
+                      <img src="img/cart-product-1.jpg" alt="" width="39" height="43">
+                      <h3>Любительская селфи-палка</h3>
+                    </a>
+                    <button class="cart-delete-button" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a href="#">
+                      <img src="img/cart-product-2.jpg" alt="" width="39" height="43">
+                      <h3>Профессиональная селфи-палка</h3>
+                    </a>
+                    <button class="cart-delete-button"  type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <dl class="cart-total">
+                  <div class="cart-total-wrapper">
+                    <dt>Товаров:</dt>
+                    <dd>2</dd>
+                  </div>
+                  <div class="cart-total-wrapper">
+                    <dt>Сумма:</dt>
+                    <dd>2000 ₽</dd>
+                  </div>
+                </dl>
+                <a class="button popover-cart-button" href="#">Открыть корзину</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -316,7 +350,6 @@
         </div>
       </div>
     </footer>
-
 
     <section class="modal-cart">
       <h2 class="visually-hidden">Корзина</h2>
