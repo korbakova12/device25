@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <title>Магазин гаджетов DEVICE</title>
   </head>
   <body>
@@ -13,21 +14,19 @@
           <img class="logo-img" src="img/header-logo.svg" alt="Логотип Device" width="145" height="36">
         </a>
         <div class="user-menu">
-          <form action="https://echo.htmlacademy.ru/" method="get" class="search">
+          <form class="search" action="https://echo.htmlacademy.ru/" method="get">
             <label>
               <span class="visually-hidden">Поиск по сайту</span>
               <input type="text" name="search" placeholder="Поиск по сайту">
             </label>
             <div class="submit-button-wrapper">
-              <button type="submit">
-                Найти
-              </button>
+              <button type="submit">Найти</button>
             </div>
           </form>
 
           <ul class="navigation-list account-list">
             <li>
-              <a href="#" class="login">Войти</a>
+              <a class="login" href="#">Войти</a>
             </li>
           </ul>
 
@@ -37,8 +36,7 @@
             </li>
             <li class="navigation-item cart">
               <a class="cart-link" href="#">
-                <span class="cart-counter">2</span>
-                Корзина
+                <span class="cart-counter">2</span>Корзина
               </a>
               <div class="popover popover-cart">
                 <h2 class="visually-hidden">Корзина</h2>
@@ -175,7 +173,7 @@
 
             <li class="slider-item" hidden>
               <div class="slider-img-wrapper">
-                <img  class="slider-img" src="img/slider-3.png" alt="Палка для селфи" width="560" height="560">
+                <img class="slider-img" src="img/slider-3.png" alt="Палка для селфи" width="560" height="560">
                 <div class="slider-buttons">
                   <button class="slider-button slider-button-prev" type="button">
                     <span class="visually-hidden">Предыдущее фото</span>
@@ -208,7 +206,7 @@
           </ul>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current"  type="button">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
                 <span class="visually-hidden">Первый слайд</span>
               </button>
             </li>
@@ -270,13 +268,11 @@
               <p class="services-description">Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! Ведь <br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-
             <li class="services-guarantee">
               <h3>Гарантия</h3>
               <p class="services-description">Если из-за возгорания купленного у нас товара у ваc сгорит дом — не переживайте, мы выдадим вам новый.
                 Товар, не дом, конечно же.</p>
             </li>
-
             <li class="services-credit">
               <h3>Кредит</h3>
               <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
@@ -286,9 +282,7 @@
         </div>
       </section>
       <div class="page-wrapper">
-        <a class="promo" href="#">
-          Доставим редкий товар под заказ
-        </a>
+        <a class="promo" href="#">Доставим редкий товар под заказ</a>
       </div>
 
       <div class="main-columns page-wrapper">
@@ -309,15 +303,8 @@
           <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <address class="contacts-address">
-            <ul class="contacts-address-list">
-              <li>
-                Санкт-Петербург, набережная реки Карповки, 5, литера П.
-              </li>
-
-              <li>
-                <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-              </li>
-            </ul>
+            <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
           </address>
           <h3 class="contacts-subtitle">Время работы</h3>
           <ul class="contacts-schedule">
@@ -337,9 +324,8 @@
           </div>
           <div class="newsletter-form-wrapper">
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="newsletter-email" class="visually-hidden">Ваш Email</label>
+              <label class="visually-hidden" for="newsletter-email">Ваш Email</label>
               <input class="newsletter-email" type="email" name="email" id="newsletter-email" placeholder="Ваш e-mail">
-
               <button type="submit">Подписаться</button>
             </form>
             <p class="newsletter-free">Это бесплатно</p>
@@ -354,9 +340,7 @@
           <img class="logo-img" src="img/footer-logo.svg" alt="Логотип Device" width="145" height="36">
         </a>
         <div class="footer-middle">
-          <address class="page-footer-address">
-            Санкт-Петербург, набережная реки Карповки, 5, литера П.
-          </address>
+          <address class="page-footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
           <ul class="footer-info">
             <li>
               <a href="#">Доставка</a>
@@ -430,13 +414,13 @@
           <div class="modal-delivery-wrapper">
             <div class="input-wrapper">
               <label for="delivery-name">Ваше имя:</label>
-              <input class="delivery-name" id="delivery-name" type="text" name="name" placeholder="Введите имя">
+              <input class="delivery-name" type="text" name="name" id="delivery-name" placeholder="Введите имя">
               <span class="input-help">Добавьте имя</span>
             </div>
 
             <div class="input-wrapper">
               <label for="delivery-email">Ваш e-mail:</label>
-              <input class="delivery-email" id="delivery-email" type="email" name="email" placeholder="Введите e-mail">
+              <input class="delivery-email" type="email" name="email" id="delivery-email"  placeholder="Введите e-mail">
               <span class="input-help input-help-error">Забавный у вас адрес</span>
             </div>
          </div>
@@ -444,7 +428,7 @@
           <div class="modal-delivery-wrapper">
             <div class="input-wrapper">
               <label for="delivery-goods">Что нужно привезти:</label>
-              <input class="delivery-goods" id="delivery-goods" type="text" name="order" placeholder="В свободной форме">
+              <input class="delivery-goods" type="text" name="order" id="delivery-goods"  placeholder="В свободной форме">
             </div>
 
             <div class="input-wrapper">
@@ -457,13 +441,11 @@
             к провозу багажа.</p>
               </div>
               <div class="quantity-wrapper">
-                <button type="button" class="quantity-button quantity-decrease">
-                  -
+                <button class="quantity-button quantity-decrease" type="button">-
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
-                <input class="delivery-quantity" id="quantity" type="number" name="order" value="1">
-                <button type="button" class="quantity-button quantity-increase">
-                 +
+                <input class="delivery-quantity" type="number" name="order" id="quantity" value="1">
+                <button class="quantity-button quantity-increase" type="button">+
                   <span class="visually-hidden">Увеличить количество</span>
                 </button>
               </div>
@@ -473,6 +455,5 @@
         </form>
       </section>
     </div>
-
   </body>
 </html>

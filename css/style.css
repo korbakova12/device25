@@ -27,17 +27,21 @@ html {
 }
 
 body {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   margin: 0;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
 }
 
 .button {
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  min-width: 180px;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -48,10 +52,6 @@ body {
   text-decoration: none;
   background-color: transparent;
   border: none;
-  position: relative;
-  z-index: 1;
-  padding: 10px 20px;
-  min-width: 180px;
   cursor: pointer;
 }
 
@@ -306,7 +306,7 @@ body {
   width: 16px;
   height: 14px;
   margin-top: -7px; */
-  padding-left: 0px;
+  padding-left: 0;
   background-image: url("../img/cart.svg");
   background-repeat: no-repeat;
   background-position: 17px 12px;
@@ -671,15 +671,13 @@ body {
 
 .slider-item::before {
   content: "0" counter(slider);
-  width: 250px;
-  height: 135px;
   color: #ffffff;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 180px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 180px;
   position: absolute;
-  top: 35px;
+  top: -30px;
   right: 49px;
   text-align: right;
 }
@@ -801,6 +799,7 @@ body {
   position: absolute;
   right: 0;
   top: 325px;
+  z-index: 1;
 }
 
 .slider-pagination-item {
@@ -917,8 +916,6 @@ body {
   outline-offset: 2px;
 }
 
-
-
 .services {
   background-color: #f0f0f0;
   margin-bottom: 70px;
@@ -931,7 +928,6 @@ body {
   align-items: flex-start;
   padding-bottom: 72px;
 }
-
 
 .services-button-list {
   margin: 0;
@@ -948,8 +944,6 @@ body {
 .services-button-list li {
   margin-bottom: 35px;
 }
-
-
 
 .services-button {
   padding: 10px 20px;
@@ -995,7 +989,6 @@ body {
   padding: 0;
   list-style-type: none;
   width: 757px;
-
 }
 
 .services-list li {
@@ -1005,10 +998,8 @@ body {
   background-position: top 72px right 63px;
 }
 
-
 .services-delivery {
   background-image: url("../img/delivery.svg");
-
 }
 
 .services-guarantee {
@@ -1068,7 +1059,6 @@ body {
   left: 0;
 }
 
-
 .promo::after {
   content: "";
   width: 125px;
@@ -1098,8 +1088,6 @@ body {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
-
-
 
 .main-columns {
   display: flex;
@@ -1212,13 +1200,12 @@ body {
 
 .contacts-address {
   font-style: normal;
+  margin-bottom: 30px;
 }
 
-.contacts-address-list {
-  list-style-type: none;
+.contacts-address p {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .contacts-phone {
@@ -1236,7 +1223,6 @@ body {
 .contacts-phone:focus {
   outline: 2px solid #af4fff;
 }
-
 
 .contacts-schedule {
   list-style-type: none;
@@ -1257,7 +1243,6 @@ body {
   font-weight: 800;
   line-height: 50px;
   color: #000000;
-
   width: 350px;
   margin-top: 0;
   margin-bottom: 0;
@@ -1767,9 +1752,6 @@ body {
   margin-right: 8px;
 }
 
-
-
-
 /*Страница каталога*/
 
 .main-inner {
@@ -1989,7 +1971,6 @@ body {
   color: #000000;
 }
 
-
 .range-inputs-wrapper input::-webkit-outer-spin-button,
 .range-inputs-wrapper input::-webkit-inner-spin-button {
   appearance: none;
@@ -2005,7 +1986,6 @@ body {
   margin-right: 20px;
 }
 
-
 .catalog-filter-list {
   list-style-type: none;
   margin: 0;
@@ -2015,7 +1995,6 @@ body {
 .catalog-filter-list li:not(:last-child) {
   margin-bottom: 17px;
 }
-
 
 .control {
   position: relative;
@@ -2049,7 +2028,7 @@ body {
 .control-mark {
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 0;
   width: 16px;
   height: 16px;
   border: 2px solid #cccccc;
@@ -2087,7 +2066,6 @@ body {
   top: 4px;
   left: 4px;
 }
-
 
 .sorting-wrapper {
   display: flex;
@@ -2164,8 +2142,6 @@ body {
   z-index: 1;
 }
 
-
-
 .products-list {
   margin: 0;
   margin-bottom: 44px;
@@ -2194,7 +2170,6 @@ body {
   right: 27px;
   background-image: url("../img/product_new.svg");
   background-repeat: no-repeat;
-
 }
 
 .products-item:hover::after {
@@ -2311,7 +2286,8 @@ body {
   align-items: center;
 }
 
-.pagination-prev a, .pagination-next a {
+.pagination-prev a,
+.pagination-next a {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 22px;
@@ -2378,17 +2354,3 @@ body {
 .pagination-item .pagination-current {
   color: rgba(68, 68, 68, 0.6);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
