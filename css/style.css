@@ -214,7 +214,7 @@ body {
   opacity: 0.3;
 }
 
-.search input::-webkit-input-placeholder {
+.search input::placeholder {
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   color: inherit;
@@ -261,6 +261,7 @@ body {
 
 .navigation-list a:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .navigation-list a:active {
@@ -406,7 +407,7 @@ body {
   opacity: 0.3;
 }
 
-.cart-delete-button:focus {
+.cart-delete-button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -454,7 +455,7 @@ body {
   opacity: 1;
 }
 
-.popover-cart .popover-cart-button:focus {
+.popover-cart .popover-cart-button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -521,7 +522,7 @@ body {
   opacity: 0.3;
 }
 
-.info-item a:not(.header-catalog-link):focus {
+.info-item a:not(.header-catalog-link):focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -537,7 +538,7 @@ body {
   align-items: center;
 }
 
-.header-catalog-link:focus {
+.header-catalog-link:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -834,12 +835,14 @@ body {
   opacity: 0.3;
 }
 
-.slider-pagination-button:focus-visible {
+.slider-pagination-button:focus-visible:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
-
-
 
 .catalog {
   margin-bottom: 70px;
@@ -950,7 +953,7 @@ body {
   font-size: 18px;
 }
 
-.services-button:focus {
+.services-button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -980,7 +983,7 @@ body {
   outline-offset: 2px;
 }
 
-.services-button-active:focus {
+.services-button-active:focus-visible {
   outline: none;
 }
 
@@ -1084,7 +1087,7 @@ body {
   opacity: 0.3;
 }
 
-.promo:focus {
+.promo:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1220,8 +1223,9 @@ body {
   opacity: 0.3;
 }
 
-.contacts-phone:focus {
+.contacts-phone:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .contacts-schedule {
@@ -1293,7 +1297,7 @@ body {
   cursor: pointer;
 }
 
-.newsletter-email:focus {
+.newsletter-email:focus-visible {
   background-color: #dcdcdc;
 }
 
@@ -1331,6 +1335,7 @@ body {
 
 .newsletter-form button:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .newsletter-form button:active {
@@ -1512,6 +1517,7 @@ body {
 
 .copyright:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /*Модальные окна*/
@@ -1563,7 +1569,7 @@ body {
   opacity: 0.3;
 }
 
-.modal-close:focus {
+.modal-close:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1608,7 +1614,7 @@ body {
   background-color: #dcdcdc;
 }
 
-.modal-delivery input:focus {
+.modal-delivery input:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1875,7 +1881,9 @@ body {
   font-size: 15px;
   line-height: 18px;
   text-align: center;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  /* opacity: 0.3; */
 }
 
 .range-scale {
@@ -1910,16 +1918,14 @@ body {
 }
 
 .range-toggle:active {
-  border-color: rgba(0, 0, 0, 0.3);
+  background-color: #000000;
 }
 
 .range-toggle:focus-visible::after {
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1940,18 +1946,13 @@ body {
   left: -5px;
 }
 
-.range-inputs-wrapper label {
-  display: flex;
-  font-size: 15px;
-  line-height: 18px;
-}
-
 .range-inputs-wrapper input {
   background-color: transparent;
   border: none;
   outline: none;
   color: #000000;
   appearance: textfield;
+  font-family: inherit;
   font-size: 15px;
   line-height: 18px;
   cursor: pointer;
@@ -1967,8 +1968,9 @@ body {
   outline-offset: 2px;
 }
 
-.range-inputs-wrapper input::-webkit-input-placeholder {
+.range-inputs-wrapper input::placeholder {
   color: #000000;
+  opacity: 0.3;
 }
 
 .range-inputs-wrapper input::-webkit-outer-spin-button,
@@ -2011,11 +2013,11 @@ body {
   opacity: 0.3;
 }
 
-.control-input:focus + .control-mark::after {
+.control-input:focus-visible + .control-mark::after {
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
+  display: block;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2098,8 +2100,9 @@ body {
   opacity: 0.3;
 }
 
-.sorting-control:focus {
+.sorting-control:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .sorting-button {
@@ -2136,7 +2139,7 @@ body {
   opacity: 1;
 }
 
-.sorting-button:focus {
+.sorting-button:focus-visible {
   outline: 2px solid rgba(175, 79, 255, 1);
   outline-offset: 2px;
   z-index: 1;
@@ -2199,7 +2202,7 @@ body {
   background-color: #ffc700;
 }
 
-.products-item:focus {
+.products-item:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2266,6 +2269,7 @@ body {
 
 .load-more:focus-visible {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .load-more:active {
@@ -2309,8 +2313,8 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination-prev a:focus,
-.pagination-next a:focus {
+.pagination-prev a:focus-visible,
+.pagination-next a:focus-visible {
   background-color: #f0f0f0;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -2346,7 +2350,7 @@ body {
   color: rgba(68, 68, 68, 0.1);
 }
 
-.pagination-item a:focus {
+.pagination-item a:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
