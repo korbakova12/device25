@@ -501,9 +501,8 @@ body {
   opacity: 0.3;
 }
 
-.info-item a:not(.header-catalog-link):focus-visible {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
+.info-item a:focus-visible {
+  outline: none;
 }
 
 .info-list .header-catalog {
@@ -573,6 +572,11 @@ body {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
+}
+
+.submenu a:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .submenu li:nth-child(2),
